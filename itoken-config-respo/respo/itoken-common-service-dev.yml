@@ -1,0 +1,20 @@
+#mybatis:
+#  configuration:
+#    cache-enabled: true
+#  type-aliases-package: person.jzh.itoken.common.domain
+#  mapper-locations: classpath:mapper/*.xml
+
+mybatis-plus:
+  mapper-locations: classpath*:mapper/**/*Mapper.xml
+  type-aliases-package: person.jzh.itoken.common.domain.*
+  global-config:
+    db-config:
+      id-type: uuid
+  configuration:
+    map-underscore-to-camel-case: false
+    cache-enabled: true
+    # 打印 sql 语句
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+swagger:
+  enable: true

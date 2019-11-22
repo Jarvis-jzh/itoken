@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: itoken-zipkin
+
+server:
+  port: 9411
+
+management:
+  metrics:
+    web:
+      server:
+        auto-time-requests: false
+
+eureka:
+  instance:
+    hostname: 192.168.56.102
+    instance-id: 192.168.56.102:9411

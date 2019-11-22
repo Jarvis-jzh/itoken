@@ -1,0 +1,32 @@
+stages:
+  - build
+  # - push
+  - run
+  - clean
+
+build:
+  stage: build
+  script:
+    - /usr/local/maven/apache-maven-3.5.3/bin/mvn clean package
+    - cp target/itoken-zuul-1.0.0-SNAPSHOT.jar docker
+    - cd docker
+    # - docker rmi jzh/itoken-zuul
+    - docker build -t jzh/itoken-zuul .
+
+# 推送到仓库里，因为内存不够，没有私服
+#push:
+#  stage: push
+#  script:
+#    - docker push jzh/itoken-zuul
+
+run:
+  stage: run
+  script:
+    - cd docker
+    - docker-compose down
+    - docker-compose up -d
+
+clean:
+  stage: clean
+  script:
+    - docker rmi $(docker images -q -f dangling=true)

@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: itoken-web-admin
+
+server:
+  port: 8601
+
+eureka:
+  instance:
+    hostname: localhost
+    instance-id: localhost:8601

@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: itoken-web-backend
+
+server:
+  port: 8603
+
+eureka:
+  instance:
+    hostname: localhost
+    instance-id: localhost:8603

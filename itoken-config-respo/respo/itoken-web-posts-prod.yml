@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: itoken-web-posts
+
+server:
+  port: 8602
+
+eureka:
+  instance:
+    hostname: localhost
+    instance-id: localhost:8602

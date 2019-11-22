@@ -1,0 +1,18 @@
+spring:
+  boot:
+    admin:
+      client:
+        url: http://192.168.56.102:8084
+        instance:
+#          service-url: http://192.168.56.102
+          prefer-ip: true
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    health:
+      sensitive: false

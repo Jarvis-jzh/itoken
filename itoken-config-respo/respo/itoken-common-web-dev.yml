@@ -1,0 +1,20 @@
+thymeleaf:
+  # 开发时关闭缓存，不然没法看到实时页面
+  cache: false
+  # 用非严格的HTML
+  mode: LEGACYHTML5
+  encoding: UTF-8
+  servlet:
+    content-type: text/html
+
+feign:
+  hystrix:
+    enabled: true
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000

@@ -1,0 +1,13 @@
+version: '3.1'
+services:
+  itoken-service-redis:
+    restart: always
+    image: jzh/itoken-service-redis
+    container_name: itoken-service-redis
+    ports:
+      - 8502:8502
+    networks:
+      - itoken-service-redis
+
+networks:
+  itoken-service-redis:

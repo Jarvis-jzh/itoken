@@ -1,0 +1,10 @@
+itoken:
+  zuul: http://localhost:8769
+  web:
+    admin: http://localhost:8601
+    posts: http://localhost:8602
+  service:
+    admin: http://localhost:8501
+    redis: http://192.168.56.102:8502
+    sso: http://localhost:8503
+    posts: http://localhost:8504
